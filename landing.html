@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple HTML HomePage</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+    body {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    /* CSS for header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f5f5f5;
+    }
+
+    .header .logo {
+      font-size: 25px;
+      font-family: 'Sriracha', cursive;
+      color: #000;
+      text-decoration: none;
+      margin-left: 30px;
+    }
+
+    .nav-items {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #cd201f;
+      margin-right: 20px;
+    }
+
+    .nav-items a {
+      text-decoration: none;
+      color: #000;
+      padding: 35px 20px;
+    }
+.dropbtn {
+  background-color: #5edaf0;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ff6b61;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+
+.dropdown:hover .dropbtn {background-color: #1589FF ;}
+
+
+    /* CSS for main element */
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height:400px;
+      font-family: "Times New Roman", Times, serif;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://www.secadva.unach.mx/images/Bolsa_Trabajo/2.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .intro h1 {
+      font-family:  "Times New Roman", Times, serif;
+      font-size: 60px;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0;
+      text-align:right;
+      
+    }
+
+    .intro p {
+      font-size: 20px;
+      color: #d1d1d1;
+      text-transform: uppercase;
+      margin: 20px 0;
+    }
+
+    .intro button {
+      background-color: #5edaf0;
+      color: #000;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+     
+    }
+
+    .achievements {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 80px;
+    }
+
+    .achievements .work {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .achievements .work i {
+      width: fit-content;
+      font-size: 50px;
+      color: #333333;
+      border-radius: 50%;
+      border: 2px solid #333333;
+      padding: 12px;
+    }
+
+    .achievements .work .work-heading {
+      font-size: 20px;
+      color: #333333;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    .achievements .work .work-text {
+      font-size: 15px;
+      color: #585858;
+      margin: 10px 0;
+    }
+
+    .about-me {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 80px;
+      border-top: 2px solid #eeeeee;
+    }
+
+    .about-me img {
+      width: 400px;
+      max-width: 100%;
+      height: 300px;
+      border-radius: 10px;
+    }
+
+    .about-me-text h2 {
+      font-size: 30px;
+      color: #333333;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .about-me-text p {
+      font-size: 15px;
+      color: #585858;
+      margin: 10px 0;
+    }
+
+
+  
+:root {
+  --bg: #dcdde1;     
+  --color-icon: #535c68;  
+  --social-icon1: #e4405f;
+  --social-icon2: #3b5999;
+  --social-icon3: #cd201f;
+  --social-icon4:#0077B5; 
+  
+}
+
+* {
+  margin: 0;
+  padding: 0;  
+}
+
+section {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  background: var(--bg);
+  z-index: -10;
+}
+
+.icon-list {
+  width: 100%;
+  max-width: 50rem;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-item {
+  list-style: none
+}
+
+.icon-link {  
+  display: inline-flex;
+  font-size: 3rem;  
+  text-decoration: none;  
+  color: var(--color-icon);
+  width: 6rem;
+  height: 6rem;   
+  transition: .5s linear;
+  position: relative;
+  z-index: 1;
+  margin: auto
+}
+
+.icon-link:hover {
+  color: #fff;
+}
+
+.icon-link i {
+  margin: auto;    
+}
+
+.icon-link::before {  
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 6rem;
+  height: 6rem;
+  background: #000;
+  border-radius: 50%;
+  z-index: -1;
+  transform: scale(0);
+  transition: 0.3s cubic-bezier(.95, .32, .37, 1.21);
+}
+  
+.icon-link:hover::before {  
+  transform: scale(1);
+}
+
+.icon-item:nth-child(1) a:hover:before { 
+  background: var(--social-icon1); 
+}
+
+.icon-item:nth-child(2) a:hover:before { 
+  background: var(--social-icon2); 
+}
+
+
+
+.icon-item:nth-child(3) a:hover:before { 
+  background: var(--social-icon3); 
+}
+
+.icon-item:nth-child(4) a:hover:before { 
+  background: var(--social-icon4); 
+}
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <a href="#" class="logo">BUSINESS SOLUTIONS</a>
+    <nav class="nav-items">
+    
+    <div class="dropdown">
+       <button class="dropbtn">SOLUTIONS</button>
+       <div class="dropdown-content">
+       <a href="#">restaurant business</a>
+       <a href="#">product business</a>
+      <a href="#">retail business</a>
+     <a href="#">service business</a>
+        </div>
+</div>
+      
+       <div class="dropdown">
+       <button class="dropbtn">AREAS</button>
+       <div class="dropdown-content">
+       <a href="#">BANGALORE</a>
+       <a href="#">MUMBAI</a>
+      <a href="#">HYDERABAD</a>
+       <a href="#">CHENNAI</a>
+        <a href="#">PUNE</a>
+        </div>
+</div>
+  
+    <div class="dropdown">
+       <button class="dropbtn">CONTACTS</button>
+       <div class="dropdown-content">
+       <a href="#">BANGALORE-9898977655</a>
+       <a href="#">HYDERABAD-9987564435</a>
+      <a href="#">CHENNAI-98984321234</a>
+          <a href="#">PUNE-9988765555</a>
+      <a href="#">MUMBAI-91233456784</a>
+        </div>
+</div>
+   
+    </nav>
+  </header>
+  <main>
+    <div class="intro">
+      <h1>KRISHNA MURTHY</h1><h1> BUSINESS SOLUTIONS</h1>
+      <p>We solve problems. You grow your business</p>
+      <button>Learn More</button>
+    </div>
+    <div class="achievements">
+      <div class="work">
+        <i class="fas fa-atom"></i>
+        <p class="work-heading">Projects</p>
+        <p class="work-text">I have worked on many projects and I am very proud of them. I am a very good developer and I am always looking for new projects.</p>
+      </div>
+      <div class="work">
+        <i class="fas fa-skiing"></i>
+        <p class="work-heading">Skills</p>
+        <p class="work-text">I have a lot of skills and I am very good at them. I am very good at programming and I am always looking for new skills.</p>
+      </div>
+      <div class="work">
+        <i class="fas fa-ethernet"></i>
+        <p class="work-heading">Network</p>
+        <p class="work-text">I have a lot of network skills and I am very good at them. I am very good at networking and I am always looking for new network skills.</p>
+      </div>
+    </div>
+
+
+    <div class="about-me">
+
+      <div class="about-me-text">
+        <h2>About Us</h2>
+        <p>Business solutions companies provide services that help improve a company’s processes, enhance performance and ultimately make the company more profitable as it scales over time.
+In this article, we’ll take a look at best business solutions companies that provide top-notch consulting and accounting services.Business solutions companies provide services that address and solve the issues their clients are having such as financial problems and inefficient processes.Inefficient business processes can hurt companies in more ways than their managers and decision-makers might realize: they can create bottlenecks, inflate costs and hamper growth.
+
+Business solutions companies provide services that address and solve the issues their clients are having such as financial problems and inefficient processes.Business leaders often face gaps in knowledge and resources that they need for executing certain tasks or projects. Business solutions providers help them fill these gaps to help put them on a path to success.These experts are especially helpful for providing solutions such as running office systems, filling taxes, coordinating supply chains and other aspects of business in which the cost of a mistake is very high.An interesting fact says that the expectations of companies that use accounting services have widened and 37% of them strongly agree that they look for business advice as well.</p>
+     
+    
+<div class="about-me img">
+      <img src="https://media.istockphoto.com/photos/business-group-picture-id505594930?k=6&m=505594930&s=612x612&w=0&h=xus3pd-OvAyyJollrUu5ICxBr11Q6Yld7WVhvdSirKA=" >
+    </div>
+  </div>
+
+  </main>
+  <footer class="footer">
+
+  
+        <section>
+  <ul class="icon-list">
+    <li class="icon-item">
+      <a href="#" class="icon-link"><i class="fab fa-instagram"></i></a>
+    </li>
+    <li class="icon-item">
+      <a href="#" class="icon-link"><i class="fab fa-facebook-f"></i></a>
+    </li>
+   
+    <li class="icon-item">
+      <a href="#" class="icon-link"><i class="fab fa-youtube"></i></a>
+    </li>
+    <li class="icon-item">
+      <a href="#" class="icon-link"><i class="fab fa-linkedin-in"></i></a>
+    </li>    
+  </ul>
+</section>
+    </div>
+  </footer>
+</body>
+
+</html>
